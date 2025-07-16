@@ -91,7 +91,7 @@ func NewErrorResponse(msg string) *ErrorResponse {
 // Handler forwards requests and responses between the docker daemon and the plugin.
 type Handler struct {
 	ipam Ipam
-	sdk.Handler
+	*sdk.Handler
 }
 
 // NewHandler initializes the request handler with a driver implementation.

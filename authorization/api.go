@@ -103,7 +103,7 @@ type Plugin interface {
 // Handler forwards requests and responses between the docker daemon and the plugin.
 type Handler struct {
 	plugin Plugin
-	sdk.Handler
+	*sdk.Handler
 }
 
 // NewHandler initializes the request handler with a plugin implementation.
